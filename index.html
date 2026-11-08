@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER & CO. | Artisanal Specialty Coffee & Roastery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300b4d8'><path d='M2 21h18v-2H2v2zm2-4h14a5 5 0 0 0 5-5V7h-3V3H4v14zm2-12h10v9a3 3 0 0 1-3 3H6V5zm12 4h1a3 3 0 0 1 0 6h-1V9z'/></svg>">
+</head>
+
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <p>☕ Buka Setiap Hari: 08.00 - 23.00 WIB | 📍 Senopati, Jakarta Selatan</p>
+            <div class="top-bar-links">
+                <span class="badge-pulse"></span>
+                <span>Dine-In • Takeaway • Reservasi</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-mark">A&C</span>
+                <span class="logo-text">AETHER <span>&</span> CO.</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Beranda</a>
+                <a href="#tentang" class="nav-link">Tentang</a>
+                <a href="#menu" class="nav-link">Menu Kopi</a>
+                <a href="#ulasan" class="nav-link">Ulasan</a>
+                <a href="#lokasi" class="nav-link">Lokasi</a>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <!-- Cart Trigger Button -->
+                <button class="cart-btn" id="openCartBtn" aria-label="Buka Pesanan">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-label">Pesanan</span>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+
+                <a href="#lokasi" class="btn btn-outline nav-cta">Reservasi</a>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="tag-dot"></span>
+                    <span>ARTISANAL ROASTERY & COFFEE BAR</span>
+                </div>
+                <h1 class="hero-title">
+                    Seduhan Presisi, <br>
+                    <span>Cita Rasa Abadi.</span>
+                </h1>
+                <p class="hero-desc">
+                    Menghadirkan seleksi biji kopi nusantara dan dunia pilihan. Dipanggang secara presisi dengan
+                    dedikasi para barista berpengalaman untuk menciptakan cangkir kopi sempurna setiap hari.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#menu" class="btn btn-primary">
+                        <span>Lihat Menu Kopi</span>
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#lokasi" class="btn btn-secondary">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>Kunjungi Bar Kami</span>
+                    </a>
+                </div>
+
+                <!-- Hero Stats -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Specialty Arabica</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <span class="stat-num">4.9 / 5</span>
+                        <span class="stat-label">500+ Ulasan Puas</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card">
+                        <span class="stat-num">18+</span>
+                        <span class="stat-label">Single Origin & Signature</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual & Floating Badge -->
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+                        alt="Espresso Barista Art" class="hero-img">
+                </div>
+
+                <!-- Floating Info Card 1 -->
+                <div class="floating-badge badge-top-left">
+                    <div class="badge-icon">☕</div>
+                    <div>
+                        <div class="badge-title">Signature Blend</div>
+                        <div class="badge-subtitle">Navy Sapphire Latte</div>
+                    </div>
+                </div>
+
+                <!-- Floating Info Card 2 -->
+                <div class="floating-badge badge-bottom-right">
+                    <div class="badge-icon">🌟</div>
+                    <div>
+                        <div class="badge-title">Fresh Roasting</div>
+                        <div class="badge-subtitle">Disangrai Tiap Minggu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Experience Highlight Section -->
+    <section class="section about-section" id="tentang">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">KUALITAS & FILOSOFI</span>
+                <h2 class="section-title">Harmoni Seni & Ketelitian Seduh</h2>
+                <p class="section-subtitle">Setiap racikan memiliki cerita dari petani lokal hingga cangkir Anda di
+                    ruang santai kami.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <h3>Biji Kopi Terkurasi</h3>
+                    <p>Biji kopi grade 1 specialty yang dibeli secara langsung dari perkebunan binaan di Aceh Gayo,
+                        Toraja, hingga Ethiopia.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 3v18M3 12h18M6.5 6.5l11 11M6.5 17.5l11-11" />
+                        </svg>
+                    </div>
+                    <h3>Mesin Espresso Presisi</h3>
+                    <p>Ditenagai mesin espresso kustom dengan stabilitas suhu digital untuk ekstraksi aroma dan crema
+                        yang tebal optimal.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <h3>Suasana Tenang & Modern</h3>
+                    <p>Desain arsitektur modern bernuansa navy kontemporer, colokan di setiap meja, dan koneksi internet
+                        serat optik berkecepatan tinggi.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                            <line x1="6" y1="1" x2="6" y2="4" />
+                            <line x1="10" y1="1" x2="10" y2="4" />
+                            <line x1="14" y1="1" x2="14" y2="4" />
+                        </svg>
+                    </div>
+                    <h3>Pastry Segar Setiap Pagi</h3>
+                    <p>Croissant butter Prancis dan artisanal sourdough dipanggang setiap fajar oleh pastry chef
+                        in-house kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">MENU PILIHAN</span>
+                <h2 class="section-title">Koleksi Seduhan Spesial</h2>
+                <p class="section-subtitle">Pilih minuman favorit Anda dan tambahkan langsung ke daftar pesanan.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-category="all">Semua Menu</button>
+                <button class="filter-btn" data-category="signature">Signature Series</button>
+                <button class="filter-btn" data-category="espresso">Espresso Based</button>
+                <button class="filter-btn" data-category="manual">Manual Brew</button>
+                <button class="filter-btn" data-category="pastry">Pastry & Bites</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Items populated via HTML and enhanced by JS -->
+
+                <!-- Item 1 -->
+                <div class="menu-card" data-category="signature" data-id="1">
+                    <div class="menu-image-container">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80"
+                            alt="Bleu Azure Latte" class="menu-image">
+                        <span class="menu-badge">Best Seller</span>
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-header-row">
+                            <h3 class="menu-item-title">Azure Blue Macchiato</h3>
+                            <span class="menu-price">Rp 38.000</span>
+                        </div>
+                        <p class="menu-desc">Espresso double shot berpadu butterfly pea blossom infusion, sirup vanila
+                            organik, dan steamed oat milk.</p>
+                        <div class="menu-footer-row">
+                            <span class="menu-taste-tag">Aromatik • Lembut</span>
+                            <button class="add-to-cart-btn" data-id="1" data-title="Azure Blue Macchiato"
+                                data-price="38000">
+                                <span>+ Pesan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card" data-category="signature" data-id="2">
+                    <div class="menu-image-container">
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80"
+                            alt="Navy Cold Drip" class="menu-image">
+                        <span class="menu-badge badge-signature">Signature</span>
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-header-row">
+                            <h3 class="menu-item-title">Navy Reserve Cold Brew</h3>
+                            <span class="menu-price">Rp 42.000</span>
+                        </div>
+                        <p class="menu-desc">Diseduh perlahan selama 16 jam dengan air bersuhu rendah. Rasa cokelat
+                            hitam pekat dengan aroma buah plum segar.</p>
+                        <div class="menu-footer-row">
+                            <span class="menu-taste-tag">Bold • Cokelat Hitam</span>
+                            <button class="add-to-cart-btn" data-id="2" data-title="Navy Reserve Cold Brew"
+                                data-price="42000">
+                                <span>+ Pesan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card" data-category="espresso" data-id="3">
+                    <div class="menu-image-container">
+                        <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=600&q=80"
+                            alt="Classic Cappuccino" class="menu-image">
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-header-row">
+                            <h3 class="menu-item-title">Artisan Cappuccino</h3>
+                            <span class="menu-price">Rp 34.000</span>
+                        </div>
+                        <p class="menu-desc">Ekstraksi espresso harmonis dengan micro-foam susu segar yang lembut dan
+                            taburan cocoa powder murni.</p>
+                        <div class="menu-footer-row">
+                            <span class="menu-taste-tag">Creamy • Nutty</span>
+                            <button class="add-to-cart-btn" data-id="3" data-title="Artisan Cappuccino"
+                                data-price="34000">
+                                <span>+ Pesan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card" data-category="espresso" data-id="4">
+                    <div class="menu-image-container">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+                            alt="Piccolo Latte" class="menu-image">
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-header-row">
+                            <h3 class="menu-item-title">Velvet Flat White</h3>
+                            <span class="menu-price">Rp 35.000</span>
+                        </div>
+                        <p class="menu-desc">Double ristretto berkarakter kuat diselimuti lapisan tipis susu bertekstur
+                            sutra khas Melbourne style.</p>
+                        <div class="menu-footer-row">
+                            <span class="menu-taste-tag">Intens • Halus</span>
+                            <button class="add-to-cart-btn" data-id="4" data-title="Velvet Flat White"
+                                data-price="35000">
+                                <span>+ Pesan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card" data-category="manual" data-id="5">
+                    <div class="menu-image-container">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
+                            alt="Manual V60" class="menu-image">
+                        <span class="menu-badge">Single Origin</span>
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-header-row">
+                            <h3 class="menu-item-title">V60 Aceh Gayo Anaerob</h3>
+                            <span class="menu-price">Rp 45.000</span>
+                        </div>
+                        <p class="menu-desc">Seduhan tetes tangan presisi. Notes segar bergamot, madu hutan, dan floral
+                            lingering finish yang panjang.</p>
+                        <div class="menu-footer-row">
+                            <span class="menu-taste-tag">Floral • Bergamot</span>
+                            <button class="add-to-cart-btn" data-id="5" data-title="V60 Aceh Gayo Anaerob"
+                                data-price="45000">
+                                <span>+ Pesan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card" data-category="manual" data-id="6">
+                    <div class="menu-image-container">
+                        <img src="https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?auto=format&fit=crop&w=600&q=80"
+                            alt="Japanese Drip" class="menu-image">
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-header-row">
+                            <h3 class="menu-item-title">Japanese Iced Drip</h3>
+                            <span class="menu-price">Rp 44.000</span>
+                        </div>
+                        <p class="menu-desc">Drip manual yang menetes langsung di atas batu es murni kristal untuk
+                            mengunci keasaman segar dan aroma buah tropis.</p>
+                        <div class="menu-footer-row">
+                            <span class="menu-taste-tag">Crisp • Buah Tropis</span>
+                            <button class="add-to-cart-btn" data-id="6" data-title="Japanese Iced Drip"
+                                data-price="44000">
+                                <span>+ Pesan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="menu-card" data-category="pastry" data-id="7">
+                    <div class="menu-image-container">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
+                            alt="Butter Croissant" class="menu-image">
+                        <span class="menu-badge">Fresh Baked</span>
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-header-row">
+                            <h3 class="menu-item-title">Pure Butter Croissant</h3>
+                            <span class="menu-price">Rp 30.000</span>
+                        </div>
+                        <p class="menu-desc">Croissant renyah berlapis dengan aroma mentega premium Elle & Vire Prancis
+                            yang lumer di mulut.</p>
+                        <div class="menu-footer-row">
+                            <span class="menu-taste-tag">Flaky • Buttery</span>
+                            <button class="add-to-cart-btn" data-id="7" data-title="Pure Butter Croissant"
+                                data-price="30000">
+                                <span>+ Pesan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="menu-card" data-category="pastry" data-id="8">
+                    <div class="menu-image-container">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                            alt="Pain Au Chocolat" class="menu-image">
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-header-row">
+                            <h3 class="menu-item-title">Valrhona Pain Au Chocolat</h3>
+                            <span class="menu-price">Rp 36.000</span>
+                        </div>
+                        <p class="menu-desc">Pastry klasik isi batang dark chocolate Valrhona 70% dengan kulit pastry
+                            keemasan yang garing.</p>
+                        <div class="menu-footer-row">
+                            <span class="menu-taste-tag">Dark Choco • Renyah</span>
+                            <button class="add-to-cart-btn" data-id="8" data-title="Valrhona Pain Au Chocolat"
+                                data-price="36000">
+                                <span>+ Pesan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Review & Rating Section -->
+    <section class="section review-section" id="ulasan">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">TESTIMONI PELANGGAN</span>
+                <h2 class="section-title">Apa Kata Penikmat Kopi Kami</h2>
+                <p class="section-subtitle">Ulasan jujur dari komunitas dan para penikmat kopi yang telah mampir ke
+                    Aether & Co.</p>
+            </div>
+
+            <!-- Review Summary Card -->
+            <div class="rating-overview-card">
+                <div class="rating-score-box">
+                    <div class="big-rating">4.9</div>
+                    <div class="stars-blue">★★★★★</div>
+                    <div class="rating-count">Berdasarkan 540+ ulasan terverifikasi</div>
+                </div>
+
+                <div class="rating-breakdown">
+                    <div class="breakdown-row">
+                        <span>Rasa Kopi</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%;"></div>
+                        </div>
+                        <span>4.9</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Suasana & Estetika</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 96%;"></div>
+                        </div>
+                        <span>4.8</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>Pelayanan Barista</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="rating-action-box">
+                    <p>Punya pengalaman berkesan saat ngopi di sini?</p>
+                    <button class="btn btn-primary" id="openReviewModalBtn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                        </svg>
+                        <span>Tulis Ulasan</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Review Cards Grid -->
+            <div class="reviews-grid" id="reviewsContainer">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <div class="reviewer-avatar">AN</div>
+                        <div class="reviewer-info">
+                            <h4>Andi Nugraha</h4>
+                            <span class="review-badge">Pelanggan Tetap</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p class="review-comment">"Azure Blue Macchiato-nya juara banget! Gradasi warnanya estetik dan rasa
+                        kopinya tetap dominan tanpa bikin kembung. Tempatnya juga sangat tenang buat kerja laptopan
+                        seharian."</p>
+                    <div class="review-card-footer">
+                        <span class="reviewed-item">Favorit: Azure Blue Macchiato</span>
+                        <span class="review-time">2 hari yang lalu</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <div class="reviewer-avatar">SS</div>
+                        <div class="reviewer-info">
+                            <h4>Sarah Safitri</h4>
+                            <span class="review-badge">Coffee Enthusiast</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p class="review-comment">"Manual brew V60 Gayo Anaerob diseduh dengan rasio sempurna. Baristanya
+                        ramah banget menjelaskan proses pengolahan bijinya. Interior navy-nya bener-bener berkelas dan
+                        mewah."</p>
+                    <div class="review-card-footer">
+                        <span class="reviewed-item">Favorit: V60 Aceh Gayo</span>
+                        <span class="review-time">1 minggu yang lalu</span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <div class="reviewer-avatar">RP</div>
+                        <div class="reviewer-info">
+                            <h4>Reza Pratama</h4>
+                            <span class="review-badge">Verified Customer</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <p class="review-comment">"Croissant-nya beneran renyah dan buttery parah, dipadukan sama Navy Cold
+                        Brew dingin pas cuaca terik. Colokan di mana-mana dan Wi-Fi super kencang. Recommended!"</p>
+                    <div class="review-card-footer">
+                        <span class="reviewed-item">Favorit: Cold Brew & Croissant</span>
+                        <span class="review-time">2 minggu yang lalu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Opening Hours Section -->
+    <section class="section location-section" id="lokasi">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">TEMUKAN KAMI</span>
+                <h2 class="section-title">Kunjungi Bar & Roastery Kami</h2>
+                <p class="section-subtitle">Ruang nyaman untuk berdiskusi, bekerja santai, atau sekadar menikmati
+                    cangkir kopi sore hari.</p>
+            </div>
+
+            <div class="location-wrapper">
+                <!-- Location Details Card -->
+                <div class="location-info-card">
+                    <div class="info-block">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Alamat Bar</h4>
+                            <p>Jl. Senopati Raya No. 45B, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12190</p>
+                            <span class="info-note">Patokan: Seberang Taman Senopati, sebelah Navy Studio.</span>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p><strong>Senin - Jumat:</strong> 08.00 - 22.30 WIB</p>
+                            <p><strong>Sabtu - Minggu:</strong> 07.30 - 23.30 WIB</p>
+                            <span class="status-pill status-open">● Sedang Buka Hari Ini</span>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Kontak & Reservasi</h4>
+                            <p>WhatsApp: +62 812-3456-7890</p>
+                            <p>Email: hello@aethercoffee.id</p>
+                        </div>
+                    </div>
+
+                    <!-- Facilities Chips -->
+                    <div class="facilities-group">
+                        <span class="facility-chip">✓ Wi-Fi 150 Mbps</span>
+                        <span class="facility-chip">✓ Colokan Listrik</span>
+                        <span class="facility-chip">✓ Smoking & Non-Smoking</span>
+                        <span class="facility-chip">✓ Musholla Bersih</span>
+                        <span class="facility-chip">✓ Parkir Luas</span>
+                    </div>
+
+                    <!-- Direction CTAs -->
+                    <div class="location-actions">
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-primary">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                            </svg>
+                            <span>Buka di Google Maps</span>
+                        </a>
+                        <a href="https://wa.me/6281234567890?text=Halo%20Aether%20Coffee,%20saya%20ingin%20reservasi%20meja"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <span>Chat WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Interactive Embed -->
+                <div class="location-map-card">
+                    <iframe title="Peta Lokasi Aether & Co Coffee"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.04432297195!2d106.80414965!3d-6.2292358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14d30079f01%3A0x2e74f4f39b20120!2sSenopati%2C%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#hero" class="nav-logo footer-logo">
+                    <span class="logo-mark">A&C</span>
+                    <span class="logo-text">AETHER <span>&</span> CO.</span>
+                </a>
+                <p class="footer-desc">
+                    Artisan specialty coffee roastery yang berakar pada presisi seduh, keberlanjutan petani kopi lokal,
+                    dan kehangatan ruang modern bernuansa navy.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                    <a href="#" class="social-icon" aria-label="TikTok">TT</a>
+                    <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+                    <a href="#" class="social-icon" aria-label="Twitter">X</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Navigasi Cepat</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#menu">Menu & Harga</a></li>
+                    <li><a href="#ulasan">Ulasan Pengunjung</a></li>
+                    <li><a href="#lokasi">Lokasi & Jam</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Jam Layanan</h4>
+                <p class="footer-time-info"><strong>Senin - Jumat:</strong><br>08.00 - 22.30 WIB</p>
+                <p class="footer-time-info"><strong>Sabtu - Minggu:</strong><br>07.30 - 23.30 WIB</p>
+                <p class="footer-time-info"><strong>Dine-In, Takeaway, Delivery</strong></p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Buletin Spesial</h4>
+                <p class="footer-newsletter-text">Dapatkan info biji kopi seasonal baru dan voucher promo 20% langsung
+                    ke email Anda.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Masukkan email Anda..." required class="newsletter-input"
+                        id="newsletterEmail">
+                    <button type="submit" class="newsletter-submit">Daftar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 AETHER & CO. ROASTERY. Hak Cipta Dilindungi Undang-Undang.</p>
+                <p class="footer-credits">Dibuat dengan dedikasi presisi untuk penikmat kopi sejati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart / Order Slide-Over Drawer -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="cart-drawer-title-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+                <h3>Daftar Pesanan Saya</h3>
+            </div>
+            <button class="close-drawer-btn" id="closeCartBtn" aria-label="Tutup Keranjang">&times;</button>
+        </div>
+
+        <div class="cart-drawer-body" id="cartItemsList">
+            <!-- Dynamic Cart Items injected by JS -->
+            <div class="cart-empty-state" id="cartEmptyState">
+                <div class="empty-icon">☕</div>
+                <p class="empty-text">Keranjang pesanan Anda masih kosong.</p>
+                <a href="#menu" class="btn btn-outline btn-sm" id="emptyMenuBtn">Pilih Menu Sekarang</a>
+            </div>
+        </div>
+
+        <div class="cart-drawer-footer" id="cartFooter">
+            <div class="cart-subtotal-row">
+                <span>Total Estimasi:</span>
+                <span class="cart-total-price" id="cartTotalPrice">Rp 0</span>
+            </div>
+            <div class="cart-note-box">
+                <input type="text" id="orderNotes" placeholder="Catatan (e.g. less ice, oat milk)..."
+                    class="cart-note-input">
+            </div>
+            <div class="cart-actions-row">
+                <button class="btn btn-outline btn-sm" id="clearCartBtn">Kosongkan</button>
+                <button class="btn btn-primary" id="checkoutBtn">
+                    <span>Pesan via WhatsApp</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Modal Write Review -->
+    <div class="modal-overlay" id="reviewModalOverlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3>Bagikan Pengalaman Anda</h3>
+                <button class="close-modal-btn" id="closeReviewModalBtn">&times;</button>
+            </div>
+            <form id="newReviewForm">
+                <div class="form-group">
+                    <label for="reviewerName">Nama Anda</label>
+                    <input type="text" id="reviewerName" required placeholder="Contoh: Budi Santoso" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label>Beri Nilai Bintang</label>
+                    <div class="star-rating-select" id="starRatingSelect">
+                        <span class="star-select active" data-rating="1">★</span>
+                        <span class="star-select active" data-rating="2">★</span>
+                        <span class="star-select active" data-rating="3">★</span>
+                        <span class="star-select active" data-rating="4">★</span>
+                        <span class="star-select active" data-rating="5">★</span>
+                    </div>
+                    <input type="hidden" id="ratingValue" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="favoriteItem">Menu yang Dipesan</label>
+                    <input type="text" id="favoriteItem" required placeholder="Contoh: Azure Blue Macchiato"
+                        class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewComment">Ulasan Anda</label>
+                    <textarea id="reviewComment" rows="4" required
+                        placeholder="Ceritakan bagaimana rasa kopi, suasana, atau pelayanan kami..."
+                        class="form-input"></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancelReviewBtn">Batal</button>
+                    <button type="submit" class="btn btn-primary">Kirim Ulasan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Kembali ke atas">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
